@@ -1,0 +1,40 @@
+mydebug.sh
+*.dev.yml
+
+# dependencies
+node_modules
+
+# production
+build
+dist
+.husky
+
+
+
+# dev / testing
+coverage
+documentation
+
+# misc
+.DS_Store
+.env
+!*.env.sample
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+junit.xml
+.bit
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log
+report.json
+
+.vscode
+
+# tslint report
+report.json

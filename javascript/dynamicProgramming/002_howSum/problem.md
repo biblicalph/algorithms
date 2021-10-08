@@ -15,3 +15,8 @@ howSum(7, [2, 4]) = null
 howSum(8, [2, 3, 5]) = [2, 2, 2, 2], [2, 3, 3] [3, 5]
 howSum(300, [7, 14]) = null
 ```
+
+## Additional Notes
+
+`howSum` is an example of a **combinatoric** problem.
+`howSumAllCombinations` is an example of a **combinatoric optimization** problem

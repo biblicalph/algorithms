@@ -52,9 +52,7 @@ export const howSumAllCombinations = (targetSum: number, numbers: number[]): num
 };
 
 const getSummableCombinations = (targetSum: number, numbers: number[], memo = {}): number[][] | null => {
-    const memoKey = `${targetSum},${numbers.sort().join(",")}`;
-    // For a given target sum and list of numbers, if the result is known (cached), read it from the cache
-    if (memoKey in memo) return null;
+    if (targetSum in memo) return null;
     if (targetSum === 0) return [[]];
     if (targetSum < 0) return null;
 
@@ -69,8 +67,8 @@ const getSummableCombinations = (targetSum: number, numbers: number[], memo = {}
         }
     }
 
-    memo[memoKey] = combinations;
-    return memo[memoKey];
+    memo[targetSum] = combinations;
+    return memo[targetSum];
 };
 
 const addToResultItems = (num: number, result: number[][]): number[][] => {

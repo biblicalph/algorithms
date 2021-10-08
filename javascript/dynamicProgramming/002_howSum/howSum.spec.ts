@@ -48,7 +48,7 @@ const testCases = [
 ];
 
 describe("howSum spec", () => {
-    testCases.slice(0, 1).forEach(({ input, output }) => {
+    testCases.forEach(({ input, output }) => {
         it(`should return ${output} when target sum = ${input.targetSum} and numbers = ${input.numbers}`, () => {
             const result = howSum(input.targetSum, input.numbers);
 

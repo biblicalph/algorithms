@@ -17,7 +17,7 @@
  * Given a target sum and an array of numbers, the function returns true if there are any combination of elements 
  * in the numbers array that sum up to the target sum
  */
-export const howSum = (targetSum: number, numbers: number[], memo = {}) => {
+export const howSum = (targetSum: number, numbers: number[], memo: Record<string, number[] | null> = {}) => {
     if (targetSum === 0) return [];
     if (targetSum < 0) return null;
     if (targetSum in memo) return memo[targetSum];
@@ -51,7 +51,7 @@ export const howSumAllCombinations = (targetSum: number, numbers: number[]): num
     return removeDuplicateArrays(combinations);
 };
 
-const getSummableCombinations = (targetSum: number, numbers: number[], memo = {}): number[][] | null => {
+const getSummableCombinations = (targetSum: number, numbers: number[], memo: Record<string, number[][] | null> = {}): number[][] | null => {
     if (targetSum in memo) return null;
     if (targetSum === 0) return [[]];
     if (targetSum < 0) return null;

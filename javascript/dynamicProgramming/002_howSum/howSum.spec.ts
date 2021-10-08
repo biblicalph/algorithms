@@ -45,6 +45,15 @@ const testCases = [
         },
         output: null
     },
+    {
+        input: {
+            targetSum: 0, 
+            numbers: [7, 14]
+        },
+        output: [
+            []
+        ]
+    },
 ];
 
 describe("howSum spec", () => {
@@ -73,7 +82,7 @@ describe("howSumAllCombinations spec", () => {
                 return;
             } 
             output.forEach((row, ind) => {
-                expect(result[ind]).toEqual(expect.arrayContaining(row));
+                expect((result as number[][])[ind]).toEqual(expect.arrayContaining(row));
             });
         });
     });

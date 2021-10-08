@@ -12,7 +12,7 @@
  * Using a memo, we can skip some calls we have already computed and reduce the time complexity to 0(n) - a polynomial time
  * Space complexity, for both memoized and non memoized implementations is 0(n)
  */
-const fibonacci = (n: number, memo = {}) => {
+const fibonacci = (n: number, memo: Record<string, number> = {}) => {
     if (n <= 2) return 1;
     if (n in memo) return memo[n];
 

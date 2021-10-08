@@ -57,7 +57,7 @@ const createGetUnvisitedNodeWithLowestCost = ({ visitedNodes, resultGraph }: {
     visitedNodes: IVisitedNodes;
     resultGraph: IResultGraph;
 }) => {
-    return (): string => {
+    return (): string | null => {
         const result = Object.entries(resultGraph).reduce((acc, [nodeName, { cost }]) => {
             if (visitedNodes.has(nodeName)) {
                 return acc;
@@ -67,7 +67,7 @@ const createGetUnvisitedNodeWithLowestCost = ({ visitedNodes, resultGraph }: {
                 acc.node = nodeName;
             }
             return acc;
-        }, { lowestCost: Number.POSITIVE_INFINITY, node: null } as { lowestCost: number; node: string; });
+        }, { lowestCost: Number.POSITIVE_INFINITY, node: null } as { lowestCost: number; node: string | null; });
 
         return result.node;
     };
@@ -85,7 +85,7 @@ const getCheapestPathFromStartToEnd = ({ resultGraph, endNode }: {
     let currentNode = endNode;
 
     while (resultGraph[currentNode].prev) {
-        const prevNode = resultGraph[currentNode].prev;
+        const prevNode = resultGraph[currentNode].prev as string;
         path.unshift(prevNode);
         currentNode = prevNode;
     }

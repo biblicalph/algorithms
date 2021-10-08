@@ -11,7 +11,7 @@
  * Time complexity: O(n*m*m) = O(n*m^2). m^2, due to the constant exponent, executes in polynomial time
  * Space complexity: O(m^2). Accounts for space used by the stack and the space used by the array created in the function
  */
-const bestSum = (targetSum: number, numbers: number[], memo: Record<string, number[] | null> = {}): number[] => {
+const bestSum = (targetSum: number, numbers: number[], memo: Record<string, number[] | null> = {}): number[] | null => {
     if (targetSum === 0) return [];
     if (targetSum < 0) return null;
     if (targetSum in memo) return memo[targetSum];

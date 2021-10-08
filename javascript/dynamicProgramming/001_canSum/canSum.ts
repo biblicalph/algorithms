@@ -5,7 +5,7 @@
  * With memoization, we eliminate some of the calls at each level of m and achieve a O(m * n) complexity
  * Space complexity is always O(m), the height of the stack
  */
-const canSum = (targetSum: number, numbers: number[], memo = {}) => {
+const canSum = (targetSum: number, numbers: number[], memo: Record<string, boolean | null>  = {}) => {
     if (targetSum === 0) return true;
     if (targetSum < 0) return false;
 

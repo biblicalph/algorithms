@@ -20,3 +20,5 @@ howSum(300, [7, 14]) = null
 
 `howSum` is an example of a **combinatoric** problem.
 `howSumAllCombinations` is an example of a **combinatoric optimization** problem
+
+See [diagram](./sum.png) for a visual explanation of the implemented solution.

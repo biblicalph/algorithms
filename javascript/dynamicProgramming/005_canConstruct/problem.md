@@ -14,3 +14,6 @@ canConstruct(abcdef, [ab, abc, cd, def, abcd]) = true
 canConstruct(skateboard, [bo, rd, ate, t, ska, sk, boar ]) = false
 canConstruct("", [cat, dog, mouse]) = true
 ```
+
+See [abcdef problem diagram](./diagram1.png) and [skateboard problem diagram](./diagram2.png) for a visual explanation
+of the solution.

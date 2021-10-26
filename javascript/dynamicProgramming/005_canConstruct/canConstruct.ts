@@ -1,3 +1,9 @@
+/**
+ * If m = length of target and n = length of word bank array
+ * Memoized solution
+ * Space complexity: O(m)
+ * Time complexity: O(n * m)
+ */
 const canConstruct = (target: string, wordBank: string[], memo: Record<string, boolean> = {}) => {
     if (target === "") return true;
     // word bank doesn't change so target is sufficient as the key

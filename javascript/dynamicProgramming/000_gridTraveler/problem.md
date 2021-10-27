@@ -16,3 +16,5 @@ gridTraveler(1, 0) = 0
 gridTraveler(0, 1) = 0
 gridTraveler(0, 0) = 0
 ```
+
+See [Freecodecamp video](https://youtu.be/oBt53YbR9Kk?t=12265) for visualization of grid travel using tabulation method

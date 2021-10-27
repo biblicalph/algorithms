@@ -21,3 +21,19 @@ const fibonacci = (n: number, memo: Record<string, number> = {}) => {
 };
 
 export default fibonacci;
+
+/**
+ * Implementation of Fibonacci using dynamic tabulation tabulation method.
+ * Space complexity: O(n)
+ * Time complexity: O(2n) = O(n)
+ */
+export const fibonacciUsingTab = (n: number) => {
+    const fibTable = Array(n + 1).fill(0);
+    fibTable[1] = 1;
+
+    for (let i = 2; i <= n; i++) {
+        fibTable[i] = fibTable[i - 1] + fibTable[i - 2];
+    }
+
+    return fibTable[n];
+};
